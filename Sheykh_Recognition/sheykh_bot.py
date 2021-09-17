@@ -1,9 +1,13 @@
 import cv2
 import telebot
+import numpy as np
 from keras.models import load_model
 
 model = load_model("/content/model.h5")
 bot = telebot.TeleBot("___________YOUR_TOKEN___________")
+
+width = 224
+height = 224
 
 @bot.message_handler(commands=['start'])
 def say_hello(messages):
