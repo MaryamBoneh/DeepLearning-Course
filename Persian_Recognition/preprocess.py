@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import cv2
 import os
 
-for filename in os.listdir("/content/drive/MyDrive/persons/"):
+c = 1
+folder_address = "/content/drive/MyDrive/persons/"
+for filename in os.listdir(folder_address):
     print(filename)
-    faces = RetinaFace.extract_faces(img_path = "/content/drive/MyDrive/persons/" + filename, align = True)
-    print(faces)
+    faces = RetinaFace.extract_faces(img_path = folder_address + filename, align = True)
     for face in faces:
-        plt.imshow(face)
-        plt.show()
-        face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
-        cv2.imwrite("/content/drive/MyDrive/persons/" + filename, face)
+      c += 1
+      face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
+      cv2.imwrite(folder_address + "img" + str(c) + ".png", face)
