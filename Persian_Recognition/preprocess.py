@@ -1,5 +1,4 @@
 from retinaface import RetinaFace
-import matplotlib.pyplot as plt
 import cv2
 import os
 
