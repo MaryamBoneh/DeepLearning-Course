@@ -25,23 +25,27 @@ def photo(message):
     src = file_info.file_path
     with open("/content/" + src, 'wb') as new_file:
         new_file.write(downloaded_file)
-        
+
     bot.send_message(message.chat.id, 'Processing...\nPlease Wait')
 
     face = RetinaFace.extract_faces(img_path = "/content/" + src, align = True)
-    face = cv2.cvtColor(face[0], cv2.COLOR_BGR2RGB)
-    cv2.imwrite("/content/" + src, face)
-    image = cv2.imread("/content/" + src)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image = cv2.resize(image, (width, height))
-    image = image/255
-    image = image.reshape(1, width, height, 3)
-    pred = model.predict([image])
+    if len(face) > 0:
+        face = cv2.cvtColor(face[0], cv2.COLOR_BGR2RGB)
+        cv2.imwrite("/content/" + src, face)
+        image = cv2.imread("/content/" + src)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = cv2.resize(image, (width, height))
+        image = image/255
+        image = image.reshape(1, width, height, 3)
+        pred = model.predict([image])
 
-    res = np.argmax(pred)
-    if res == 0:
-      bot.reply_to(message, 'Iranian🇮🇷')
+        res = np.argmax(pred)
+        if res == 0:
+          bot.reply_to(message, 'Foreign')
+        else:
+          bot.reply_to(message, 'Iranian🇮🇷')
     else:
-      bot.reply_to(message, 'Foreign')
+        bot.send_message(message.chat.id, 'No Face')
+
 
 bot.polling()
