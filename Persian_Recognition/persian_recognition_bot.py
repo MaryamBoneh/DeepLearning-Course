@@ -25,6 +25,8 @@ def photo(message):
     src = file_info.file_path
     with open("/content/" + src, 'wb') as new_file:
         new_file.write(downloaded_file)
+        
+    bot.send_message(message.chat.id, 'Processing...\nPlease Wait')
 
     face = RetinaFace.extract_faces(img_path = "/content/" + src, align = True)
     face = cv2.cvtColor(face[0], cv2.COLOR_BGR2RGB)
