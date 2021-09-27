@@ -5,8 +5,8 @@ My exercises in the deep learning course
 
   name | MLP (Machine Learning) | CNN + MLP (Deep Learning) 
 --- | --- | --- 
-Mnist | 0.9744 |  
-Fasion Mnist | 0.8772 |  
-Cfar 10 | 0.4512 | 0.6508 
-Cfar 100 | 0.0856 | 0.3043 
+Mnist | 0.97 | 0.98
+Fasion Mnist | 0.87 | 0.90
+Cfar 10 | 0.45 | 0.65
+Cfar 100 | 0.08 | 0.30
 
