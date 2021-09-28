@@ -27,3 +27,7 @@ confusion matrix:
 --- | --- | --- 
 **with mask** | 482 | 1
 **no mask** | 2 | 507
+
+## Estimating Age
+
+<img width="712" alt="Screen Shot 1400-07-06 at 11 33 12" src="https://user-images.githubusercontent.com/72157067/135047973-2ffe2e47-e18b-4230-8652-f825c722c08e.png">
