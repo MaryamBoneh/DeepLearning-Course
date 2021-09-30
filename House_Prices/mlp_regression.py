@@ -52,7 +52,7 @@ print("[INFO] training model...")
 model.fit(x=trainX, y=trainY,
 	validation_data=(testX, testY),
 	epochs=200, batch_size=8)
-model.save('mlp_model.h5')
+model.save('weights/mlp_model.h5')
 # make predictions on the testing data
 print("[INFO] predicting house prices...")
 preds = model.predict(testX)

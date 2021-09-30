@@ -2,7 +2,7 @@ import cv2, os
 import numpy as np
 from tensorflow.keras.models import load_model
 
-model = load_model("cnn_model.h5")
+model = load_model("weights/cnn_model.h5")
 inputImages = []
 outputImage = np.zeros((64, 64, 3), dtype="uint8")
 

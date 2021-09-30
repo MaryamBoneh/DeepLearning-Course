@@ -53,7 +53,7 @@ model.fit(x=trainImagesX, y=trainY,
     validation_data=(testImagesX, testY),
     epochs=200, batch_size=8)
 
-model.save('cnn_model.h5')
+model.save('weights/cnn_model.h5')
 
 # make predictions on the testing data
 print("[INFO] predicting house prices...")
