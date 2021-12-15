@@ -21,7 +21,7 @@ img = cv2.imread(args.image)
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img = cv2.resize(img,(28,28))
 
-model.load_state_dict(torch.load(args.device))
+model.load_state_dict(torch.load(args.wieght))
 model.eval()
 
 tensor = data_transform(img).unsqueeze(0).to(device)
