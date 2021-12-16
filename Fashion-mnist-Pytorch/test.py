@@ -1,4 +1,4 @@
-import cv2, torch, argparse, torchvision, model
+import torch, argparse, torchvision, model
 import numpy as np
 
 my_parser = argparse.ArgumentParser()

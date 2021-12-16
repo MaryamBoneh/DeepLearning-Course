@@ -1,4 +1,8 @@
-import torch, torchvision
+import torch, torchvision, argparse
+
+my_parser = argparse.ArgumentParser()
+my_parser.add_argument('--device', default="cpu")
+args = my_parser.parse_args()
 
 class mnist_classifire(torch.nn.Module):
     def __init__(self):
@@ -22,7 +26,7 @@ class mnist_classifire(torch.nn.Module):
         y = torch.softmax(z,dim = 1)
         return y
 
-device=torch.device("cuda")
+device=torch.device(args.device)
 model=mnist_classifire()
 model=model.to(device)
 model.train(True)
