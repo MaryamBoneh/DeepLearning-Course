@@ -18,3 +18,16 @@ like following command:
 ```
 python train.py --device cuda
 ```
+
+## Test
+
+```
+python test.py --device cuda
+```
+
+## Inference
+
+Give the input photo with the --input argument.
+```
+python inference.py --device cuda --weight fashion-mnist.pth --input test_images/shirt.png
+```
