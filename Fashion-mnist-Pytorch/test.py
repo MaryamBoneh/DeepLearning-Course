@@ -2,7 +2,6 @@ import torch, argparse, torchvision, model
 import numpy as np
 
 my_parser = argparse.ArgumentParser()
-my_parser.add_argument('--wieght')
 my_parser.add_argument('--device')
 args = my_parser.parse_args()
 
