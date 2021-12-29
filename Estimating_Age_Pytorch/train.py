@@ -81,7 +81,6 @@ Y = np.array(Y)
 
 X_train, X_val, Y_train, Y_val = train_test_split(X, Y, test_size = 0.2)
 
-
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, X, y, transform=None):
         self.data = X
