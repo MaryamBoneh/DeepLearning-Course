@@ -1,12 +1,12 @@
 
-# Estimating Age Pytorch
+# Estimating Age Pytorch - Resnet50 (Transfer Learning)
 
 ## Install
 1. Clone Repository
 ```
 git clone https://github.com/MaryamBoneh/DeepLearning-Course.git
 ```
-2. CD Estimating_Age_Pytorch
+2. CD EstimatingAge_Pytorch_TransferLearning
 3. pip install requirements.txt
 
 ## Train
@@ -28,7 +28,7 @@ python test.py --device cuda --dataset dataset/test
 
 Give the input photo with the --input argument.
 ```
-python inference.py --device cuda --weight age-estimating-torch.pth --input test_images/image1.png
+python inference.py --device cuda --weight age-estimating-resnet50-torch.pth --input test_images/image1.png
 ```
 
 ## Dataset
