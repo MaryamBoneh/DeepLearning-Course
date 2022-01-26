@@ -119,4 +119,4 @@ for ep in range(epoch):
     print(f"epoch:{ep} , Loss:{total_loss}")
 
 #🔸🔸🔸🔸Save weights🔸🔸🔸🔸
-torch.save(model.state_dict(), "age-estimating-torch.pth")
+torch.save(model.state_dict(), "age-estimating-resnet50-torch.pth")
