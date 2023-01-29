@@ -1,6 +1,15 @@
 # DeepLearning-Course
 My exercises in the deep learning course
 
+## Voice Classification on Custom Dataset
+
+ Data | Accuracy | Loss
+--- | --- | --- 
+Train | 0.87 | 1.62
+Test | 0.90 | 1.61
+
+
+
 ## MLP vs MLP + CNN
 
   Dataset | MLP (Machine Learning) | CNN + MLP (Deep Learning) 
